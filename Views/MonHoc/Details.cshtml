@@ -1,0 +1,36 @@
+@model fourth.Models.MonHoc
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.TenMonHoc);
+}
+
+<h1> @Html.DisplayFor(model => model.KhoaHoc.TenKhoaHoc)</h1>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TenMonHoc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenMonHoc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+        @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KhoaHoc)
+            </dt>
+            <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KhoaHoc.TenKhoaHoc) *@
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-controller="KhoaHoc" asp-action="Index">Back to List</a>
+</div>
